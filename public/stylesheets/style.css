@@ -1,0 +1,159 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+#main{
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+
+}
+.logo{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo p{
+  text-align: center;
+  
+}
+.search{
+  width: 90%;
+  height: 60px;
+  display: flex;
+  position: relative;
+  margin-top: 1%;
+  gap: 0px;
+  justify-content: center;
+}
+input{
+
+  width: 45vw;
+  height: 70%;
+  left: 10%;
+  padding-left: 10px;
+  font-size: 15px;
+  background-color: #F2F2F2;
+  border: none;
+  outline-offset: 1px;
+  outline-color: #bdbdbd;
+
+}
+#send{
+  width: 80px;
+  padding: 4px;
+  height: 70%;
+  background-color: black;
+  color: #F2F2F2;
+  border: none;
+}
+#send:hover{
+  background-color: rgba(0, 0, 0, 0.863);
+}
+.show{
+  width: 90%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+}
+video{
+  height: 280px;
+}
+img{
+  width: 150px;
+}
+#btn{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: #F2F2F2;
+  margin: 5px;
+
+}
+#btn:hover{
+  background-color: rgba(0, 0, 0, 0.897);
+}
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+
+}
+::selection{
+  color: #F2F2F2;
+  background-color: black;
+}
+#about{
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.uses{
+  width: 90%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  
+}
+.uses p{
+   width: 70%;
+
+}
+.vid{
+  background-image: url('/images/c2e9b3f12e938b446133cad1c0e98f5f.jpg');
+  width: 30%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media(max-width: 600px){
+    .logo{
+    margin-top: 5%;
+    }
+    .search{
+      width: 100%;
+      margin-top: 2%;
+    }
+    input{
+      width: 35vh;
+    }
+    .logo p{
+      text-align: center;
+      font-size: medium;
+    }
+    .uses{
+      height: 80%;
+      flex-direction: column;
+    }
+    .vid{
+      width: 100%;
+      height: 150px;
+    }
+    #about p{
+      text-align: left;
+    }
+}

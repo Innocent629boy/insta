@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="shortcut icon" href="/images/c2e9b3f12e938b446133cad1c0e98f5f.jpg" type="image/jpg">
+    <title>instadownlaoder</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="logo">
+        <h2>INSTADOWNLOADER</h2>
+        <p>Download Instagram Videos, Photos, Reels, IGTV & carousel</p>
+      </div>
+      <div class="search">
+        <form id="data" method="get" action="/info">
+          <input
+            type="url"
+            name="url"
+            id="insta"
+            value=""
+            placeholder="ENTER YOUR URL.."
+          />
+          <button type="submit" id="send">Download</button>
+        </form>
+      </div>
+
+      <div class="show">
+        <% if (data) { %> <% if (data.video && data.video.length > 0) { %>
+        <h2>Videos</h2>
+        <ul>
+          <% for (const video of data.video) { %>
+          <li>
+            <video src="<%= video.video %>" controls></video>
+            <a href="<%= video.video %>" download target="_blank">
+              <button id="btn">download</button>
+            </a>
+            <img src="<%= video.thumbnail %>" alt="Video Thumbnail" />
+            <a href="<%= video.thumbnail %>"  download target="_blank"><button id="btn">thumbnail</button></a>
+          </li>
+          <% } %>
+        </ul>
+        <% } %> <% if (data.image && data.image.length > 0) { %>
+        <h2>Images</h2>
+        <ul>
+          <% for (const image of data.image) { %>
+          <li>
+            <img src="<%= image %>" alt="Image" />
+            <a href="<%= image %>" download="image" target="_blank"><button id="btn">Download</button></a>
+          </li>
+          <% } %>
+        </ul>
+        <% } %> <% if (!(data.video && data.video.length > 0) && !(data.image &&
+        data.image.length > 0)) { %>
+        <p>No data found.</p>
+        <% } %> <% } %>
+      </div>
+    </div>
+    <div id="about">
+      <div class="uses">
+        <div class="vid">
+        </div>
+        <div class="text">
+          <p>
+            It is an online web tool that helps you download Instagram
+            Videos, Photos, Reels, and IGTV. It is designed to be easy to
+            use on any device, such as a mobile phone, tablet, or computer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
